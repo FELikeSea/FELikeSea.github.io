@@ -312,16 +312,33 @@ progress::-webkit-progress-value  { background: #fff; }/*bar过渡颜色*/
     margin:40px 30px;
 }
 
-#homePage .img-set green{
-    
+#homePage .img-set{
+    width:400px;
+    position: relative;
+    top:0;
+    left:600px;
+    display:none;
 }
 
-#homePage .img-set red{
-    
+#homePage .img-set .green{
+    display: block;
+    width:30px;
+    position:absolute;
+    left:10px;
 }
 
-#homePage .img-set blue{
-    
+#homePage .img-set .red{
+    display: block;
+    width:30px;
+    position:absolute;
+    left:80px;
+}
+
+#homePage .img-set .blue{
+    display: block;
+    width:30px;
+    position:absolute;
+    left:160px;
 }
 
 #homePage img.iphone{
@@ -343,8 +360,14 @@ progress::-webkit-progress-value  { background: #fff; }/*bar过渡颜色*/
     z-index: 1;
 }
 
-#homePage .desc span{
+#homePage .desc span.all{
     display: block;
     font-size:30px;
     text-align: center;
+    margin-top: 40px;
+}
+
+#homePage .desc span.special{
+    font-size: 40px;
+    font-weight: bold;
 }

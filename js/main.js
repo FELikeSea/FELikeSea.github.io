@@ -99,9 +99,18 @@
 //页面下滑至homePage页面
 $(function(){
         $('#homePage').on('scrollSpy:enter', function() {
-		console.log('enter:', $(this).attr('id'));
+            timer = setInterval(showImg,50);
 	});
-
+        
+        function showImg(){
+            var set = document.getElementsByClassName('img-set')[0];
+            set.style.left = (set.offsetLeft + 10) + 'px';
+            set.style.display = 'block';
+            if(set.offsetLeft>=358){
+                clearInterval(timer);
+            }
+        }
+        
 	$('#homePage').on('scrollSpy:exit', function() {
 		console.log('exit:', $(this).attr('id'));
 	});
